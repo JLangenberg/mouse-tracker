@@ -86,10 +86,11 @@ public class GUI {
 		frame.getContentPane().add(mousePosY, "cell 2 1 2 1,grow");
 		mousePosY.setColumns(10);
 		
-		//ASKTEACHER: Is it oak to do that in initialize()? It is a part of the GUI,
-		// but it doesn't have anything to do with the object.
-		// Start a thread that continuously updates the two windows to show the current
-		// cursor position
+		/*XXX: Is it ok to do that in initialize()? It is a part of the GUI,
+		/ but it doesn't have anything to do with the object.
+		/ Start a thread that continuously updates the two windows to show the current
+		/ cursor position
+		*/
 		MouseUpdater mouseUpdater = new MouseUpdater(mousePosX, mousePosY);
 		mouseUpdater.start();
 	}
